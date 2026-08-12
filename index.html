@@ -1,95 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>SHADOW | Official</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SHADOW — Official</title>
+<meta name="description" content="الموقع الرسمي لـ SHADOW">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#03040b;color:#fff;font-family:Cairo,Arial,sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(#ffffff05 1px,transparent 1px),linear-gradient(90deg,#ffffff05 1px,transparent 1px);background-size:45px 45px;mask-image:linear-gradient(to bottom,#000,transparent)}
-.page{min-height:100vh;display:none;align-items:center;justify-content:center;padding:35px 16px;position:relative}.page.active{display:flex}
-.wrap{width:min(950px,100%);text-align:center}.glow{position:absolute;width:280px;height:280px;border-radius:50%;filter:blur(80px);opacity:.32;pointer-events:none}.g1{background:#2563eb;top:5%;right:5%}.g2{background:#9333ea;bottom:5%;left:5%}
-.logo{width:145px;height:145px;border-radius:50%;object-fit:cover;border:3px solid #a5c9ff;box-shadow:0 0 0 10px #3b82f611,0 0 60px #3b82f688;margin-bottom:20px}
-.big{font-size:clamp(65px,15vw,150px);line-height:.9;margin:0;font-weight:900;letter-spacing:10px;background:linear-gradient(90deg,#fff,#7dd3fc,#c084fc,#fff);-webkit-background-clip:text;color:transparent;text-shadow:0 0 45px #60a5fa55}
-.kicker{margin:25px 0;color:#a5c9ff;font-size:18px}.btn{border:0;color:#fff;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 25px;border-radius:18px;font-weight:900;cursor:pointer;font-family:inherit;transition:.25s;background:linear-gradient(135deg,#2563eb,#7c3aed);box-shadow:0 10px 30px #2563eb33}.btn:hover{transform:translateY(-4px) scale(1.02);filter:brightness(1.12)}
-.btn.green{background:linear-gradient(135deg,#0b8f4d,#20c76a)}.btn.blue{background:linear-gradient(135deg,#1479b8,#29a9ea)}.btn.purple{background:linear-gradient(135deg,#6d28d9,#c026d3)}.btn.dark{background:#ffffff0d;border:1px solid #ffffff20;box-shadow:none}
-.nav{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:25px}
-.card{background:linear-gradient(145deg,#ffffff14,#ffffff05);border:1px solid #ffffff1a;border-radius:30px;padding:35px;box-shadow:0 25px 80px #000b;backdrop-filter:blur(18px)}
-.title{font-size:42px;margin:0 0 10px;font-weight:900}.muted{opacity:.65}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px;margin:25px 0}.box{padding:22px;border-radius:20px;background:#ffffff08;border:1px solid #ffffff12}.box b{display:block;color:#9ec5ff;margin-bottom:8px}
-.links{display:grid;gap:14px;margin-top:20px}.footer{opacity:.45;margin-top:25px;font-size:13px}
-@media(max-width:600px){.card{padding:24px}.title{font-size:32px}.big{letter-spacing:5px}}
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;900&display=swap');
+:root{--bg:#04050b;--text:#fff;--muted:#aeb7cc;--blue:#35a7ff;--purple:#a855f7;--green:#20d477}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Cairo,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 15% 15%,#1683ff33,transparent 28%),radial-gradient(circle at 85% 20%,#a855f733,transparent 28%),radial-gradient(circle at 50% 90%,#00d4ff1c,transparent 30%)}
+body:after{content:"";position:fixed;inset:0;z-index:-1;opacity:.16;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+.screen{display:none;min-height:100vh;padding:28px 16px;align-items:center;justify-content:center}.screen.active{display:flex}
+.wrap{width:min(980px,100%);text-align:center}.panel{padding:34px;border:1px solid #ffffff1c;background:linear-gradient(145deg,#ffffff12,#ffffff04);border-radius:32px;box-shadow:0 30px 90px #000b;backdrop-filter:blur(18px)}
+.logo{width:155px;height:155px;border-radius:50%;display:grid;place-items:center;margin:0 auto 24px;background:conic-gradient(from 180deg,#35a7ff,#a855f7,#35a7ff);box-shadow:0 0 0 8px #35a7ff12,0 0 75px #35a7ff66}
+.logo span{width:140px;height:140px;border-radius:50%;display:grid;place-items:center;background:#050711;border:1px solid #ffffff22;font-weight:900;font-size:31px;letter-spacing:2px}
+.heroName{font-size:clamp(70px,16vw,160px);line-height:.85;margin:0;font-weight:900;letter-spacing:9px;background:linear-gradient(90deg,#fff,#69c7ff,#c084fc,#fff);-webkit-background-clip:text;color:transparent}
+.kicker{color:#9dd7ff;margin:25px 0 8px;font-weight:700;letter-spacing:1px}.muted{color:var(--muted)}
+.actions,.links{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:28px}
+.btn{border:0;cursor:pointer;color:#fff;text-decoration:none;padding:14px 23px;border-radius:17px;font:700 15px Cairo;background:linear-gradient(135deg,#1679ff,#7c3aed);box-shadow:0 12px 30px #1679ff33;transition:.2s}
+.btn:hover{transform:translateY(-3px) scale(1.02);filter:brightness(1.1)}.btn.green{background:linear-gradient(135deg,#0b9951,#20d477)}.btn.tg{background:linear-gradient(135deg,#0784c9,#31b8ff)}.btn.dark{background:#ffffff0b;border:1px solid #ffffff1c;box-shadow:none}
+.title{font-size:38px;margin:0 0 8px;font-weight:900}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px;margin-top:25px}.box{padding:22px;border-radius:20px;background:#ffffff08;border:1px solid #ffffff12}.box b{display:block;color:#8dccff;margin-bottom:8px;font-size:18px}
+.links{display:grid}.links .btn{width:100%;max-width:650px;margin:auto}
+.nav{margin-top:28px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.foot{margin-top:25px;color:#687188;font-size:12px}
+.smallLogo{font-weight:900;color:#9dd7ff;letter-spacing:2px;margin-bottom:18px}
+@media(max-width:600px){.panel{padding:24px 17px}.heroName{letter-spacing:4px}.logo{width:125px;height:125px}.logo span{width:112px;height:112px;font-size:25px}.title{font-size:31px}}
 </style>
 </head>
 <body>
 
-<!-- الصفحة 1 -->
-<section class="page active" id="home">
-<div class="glow g1"></div><div class="glow g2"></div>
+<section class="screen active" id="home">
 <div class="wrap">
-<img class="logo" src="https://via.placeholder.com/145" alt="SHADOW">
-<h1 class="big">SHADOW</h1>
+<div class="logo"><span>SH</span></div>
+<h1 class="heroName">SHADOW</h1>
 <div class="kicker">✦ OFFICIAL DIGITAL WORLD ✦</div>
-<p class="muted">مرحباً بك في عالمي — كل شيء عن SHADOW في مكان واحد.</p>
-<div class="nav"><button class="btn" onclick="go('about')">التالي ✦</button></div>
+<p class="muted">أهلاً بك في عالمي الرقمي — كل شيء عن SHADOW في مكان واحد.</p>
+<div class="actions"><button class="btn" onclick="showPage('about')">دخول إلى الموقع ✦</button></div>
 </div>
 </section>
 
-<!-- الصفحة 2 -->
-<section class="page" id="about">
-<div class="wrap"><div class="card">
-<h2 class="title">👑 عن SHADOW</h2><p class="muted">شخص مهتم بالبرمجة والبوتات والمشاريع الرقمية، وهذه الصفحة تجمع أهم الروابط والمعلومات.</p>
+<section class="screen" id="about">
+<div class="wrap"><div class="panel">
+<div class="smallLogo">SHADOW / 01</div><h2 class="title">👑 من هو SHADOW؟</h2>
+<p class="muted">صفحة شخصية تجمع معلومات التواصل والقنوات والمشاريع والبوتات الخاصة بـ SHADOW.</p>
 <div class="grid">
 <div class="box"><b>الاسم</b>SHADOW</div>
-<div class="box"><b>رقم التواصل</b>+201551070578</div>
-<div class="box"><b>المجال</b>برمجة • بوتات • مواقع</div>
+<div class="box"><b>رقم التواصل</b><span dir="ltr">+20 155 107 0578</span></div>
+<div class="box"><b>الاهتمامات</b>برمجة • بوتات • مواقع • مشاريع رقمية</div>
 </div>
-<div class="nav"><button class="btn dark" onclick="go('home')">‹ الرئيسية</button><button class="btn" onclick="go('links')">الروابط ✦</button></div>
+<div class="nav"><button class="btn dark" onclick="showPage('home')">‹ البداية</button><button class="btn" onclick="showPage('links')">التالي →</button></div>
 </div></div>
 </section>
 
-<!-- الصفحة 3 -->
-<section class="page" id="links">
-<div class="wrap"><div class="card">
-<h2 class="title">⚡ الروابط الرسمية</h2>
-<p class="muted">اختار المكان اللي عايز تزورني فيه.</p>
+<section class="screen" id="links">
+<div class="wrap"><div class="panel">
+<div class="smallLogo">SHADOW / 02</div><h2 class="title">⚡ الروابط الرسمية</h2>
+<p class="muted">كل حساباتي وروابطي المهمة في مكان واحد.</p>
 <div class="links">
-<a class="btn green" href="https://wa.me/201551070578" target="_blank">💬 واتساب — تواصل معي</a>
-<a class="btn blue" href="https://t.me/dark00909" target="_blank">✈️ قناة تيليجرام</a>
-<a class="btn green" href="https://whatsapp.com/channel/0029VbCe1tt7Noa73ypQcQ3j" target="_blank">📱 قناة واتساب</a>
-<a class="btn purple" href="https://t.me/dark_shadow0162BOT" target="_blank">🤖 بوت المتجر</a>
+<a class="btn green" href="https://wa.me/201551070578" target="_blank" rel="noopener">💬 واتساب — تواصل معي</a>
+<a class="btn tg" href="https://t.me/dark00909" target="_blank" rel="noopener">✈️ قناة تيليجرام</a>
+<a class="btn green" href="https://whatsapp.com/channel/0029VbCe1tt7Noa73ypQcQ3j" target="_blank" rel="noopener">📱 قناة واتساب</a>
+<a class="btn" href="https://t.me/dark_shadow0162BOT" target="_blank" rel="noopener">🤖 بوت المتجر</a>
 </div>
-<div class="nav"><button class="btn dark" onclick="go('about')">‹ عني</button><button class="btn" onclick="go('projects')">المشاريع ✦</button></div>
+<div class="nav"><button class="btn dark" onclick="showPage('about')">‹ السابق</button><button class="btn" onclick="showPage('projects')">التالي →</button></div>
 </div></div>
 </section>
 
-<!-- الصفحة 4 -->
-<section class="page" id="projects">
-<div class="wrap"><div class="card">
-<h2 class="title">🤖 المشاريع</h2><p class="muted">هنا تقدر تضيف كل بوتاتك ومواقعك ومشاريعك مستقبلاً.</p>
+<section class="screen" id="projects">
+<div class="wrap"><div class="panel">
+<div class="smallLogo">SHADOW / 03</div><h2 class="title">🤖 المشاريع والبوتات</h2>
+<p class="muted">قسم مخصص لمشاريع SHADOW. تقدر تضيف فيه أي بوت أو موقع جديد لاحقاً.</p>
 <div class="grid">
-<div class="box"><b>🤖 بوت المتجر</b>متاح من الروابط الرسمية</div>
-<div class="box"><b>🌐 الموقع الشخصي</b>SHADOW Official</div>
-<div class="box"><b>⚙️ مشاريع قادمة</b>قريباً...</div>
+<div class="box"><b>🤖 بوت المتجر</b>متاح الآن من صفحة الروابط.</div>
+<div class="box"><b>🌐 الموقع الرسمي</b>SHADOW Official Website.</div>
+<div class="box"><b>🚀 مشاريع قادمة</b>سيتم إضافة المشاريع الجديدة هنا.</div>
 </div>
-<div class="nav"><button class="btn dark" onclick="go('links')">‹ الروابط</button><button class="btn" onclick="go('contact')">التواصل ✦</button></div>
+<div class="nav"><button class="btn dark" onclick="showPage('links')">‹ السابق</button><button class="btn" onclick="showPage('contact')">التواصل →</button></div>
 </div></div>
 </section>
 
-<!-- الصفحة 5 -->
-<section class="page" id="contact">
-<div class="wrap"><div class="card">
-<h2 class="title">📞 تواصل معي</h2><p class="muted">للتواصل المباشر استخدم واتساب.</p>
-<a class="btn green" href="https://wa.me/201551070578" target="_blank">💬 افتح محادثة واتساب</a>
-<div class="nav"><button class="btn dark" onclick="go('projects')">‹ المشاريع</button><button class="btn" onclick="go('home')">⌂ البداية</button></div>
-<div class="footer">© 2026 SHADOW — OFFICIAL</div>
+<section class="screen" id="contact">
+<div class="wrap"><div class="panel">
+<div class="smallLogo">SHADOW / 04</div><h2 class="title">📞 تواصل مع SHADOW</h2>
+<p class="muted">اضغط الزر لفتح محادثة واتساب مباشرة.</p>
+<div class="actions"><a class="btn green" href="https://wa.me/201551070578" target="_blank" rel="noopener">💬 فتح واتساب</a></div>
+<div class="nav"><button class="btn dark" onclick="showPage('projects')">‹ السابق</button><button class="btn" onclick="showPage('home')">⌂ الرئيسية</button></div>
+<div class="foot">© 2026 SHADOW — OFFICIAL</div>
 </div></div>
 </section>
 
 <script>
-function go(id){
- document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
- const el=document.getElementById(id);el.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});
+function showPage(id){
+document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+window.scrollTo(0,0);
 }
 </script>
 </body>
