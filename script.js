@@ -1,42 +1,23 @@
-const nav = document.getElementById('nav');
-const menuBtn = document.getElementById('menuBtn');
-const pages = document.querySelectorAll('.page');
-const navLinks = document.querySelectorAll('[data-page]');
+const navLinks = [...document.querySelectorAll('.nav nav a')];
+const sections = [...document.querySelectorAll('main section[id]')];
 
-menuBtn?.addEventListener('click', () => nav.classList.toggle('open'));
-
-function showPage(id){
-  const target = document.getElementById(id) || document.getElementById('home');
-  pages.forEach(p => p.classList.remove('active-page'));
-  target.classList.add('active-page');
-
-  document.querySelectorAll('.nav a').forEach(a => {
-    a.classList.toggle('active', a.dataset.page === target.id);
+const updateActive = () => {
+  const y = window.scrollY + 180;
+  let current = 'home';
+  sections.forEach(s => {
+    if (y >= s.offsetTop) current = s.id;
   });
+  navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+};
+window.addEventListener('scroll', updateActive, {passive:true});
+updateActive();
 
-  nav.classList.remove('open');
-  window.scrollTo({top:0, behavior:'smooth'});
-  history.replaceState(null, '', '#' + target.id);
-}
-
-navLinks.forEach(link => {
-  link.addEventListener('click', e => {
-    const id = link.dataset.page;
-    if(id){
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const el = document.querySelector(a.getAttribute('href'));
+    if (el) {
       e.preventDefault();
-      showPage(id);
+      el.scrollIntoView({behavior:'smooth', block:'start'});
     }
   });
 });
-
-window.addEventListener('load', () => {
-  const id = location.hash.replace('#','') || 'home';
-  showPage(id);
-});
-
-function soon(){
-  const toast = document.getElementById('toast');
-  toast.textContent = '⚡ الميزة دي هتنزل قريباً';
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 2200);
-}

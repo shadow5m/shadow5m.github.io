@@ -5,212 +5,125 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#05070d">
   <title>SHADOW — المجهول هو الأقوى</title>
-  <meta name="description" content="موقع SHADOW الرسمي">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="scanlines"></div>
-  <div class="particles" aria-hidden="true"></div>
+  <div class="noise"></div>
+  <div class="bg-grid"></div>
+  <div class="side-glow left"></div>
+  <div class="side-glow right"></div>
 
-  <header class="topbar">
-    <a class="brand" href="#home" data-page="home" aria-label="SHADOW">
+  <header class="nav">
+    <a class="brand" href="#home" aria-label="SHADOW">
       <span class="brand-mark">S</span>
       <span>SHADOW</span>
     </a>
-
-    <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة">☰</button>
-
-    <nav class="nav" id="nav">
-      <a class="active" href="#home" data-page="home">البداية</a>
-      <a href="#about" data-page="about">✦ SHADOW</a>
-      <a href="#links" data-page="links">الروابط</a>
-      <a href="#projects" data-page="projects">المشاريع</a>
-      <a href="#contact" data-page="contact">تواصل</a>
+    <nav>
+      <a class="active" href="#home">البداية</a>
+      <a href="#about">SHADOW</a>
+      <a href="#links">الروابط</a>
+      <a href="#projects">المشاريع</a>
+      <a href="#contact">تواصل</a>
     </nav>
-
     <div class="diamond">◆</div>
   </header>
 
-  <main>
-    <!-- HOME -->
-    <section class="page active-page" id="home">
-      <section class="hero cyber-frame">
-        <div class="hero-grid"></div>
-        <div class="crown">♔</div>
-        <p class="eyebrow">◈ THE UNKNOWN IS STRONGER ◈</p>
-        <h1><span>SHA</span><b>DO</b><i>W</i></h1>
-        <p class="tagline">المجهول هو الأقوى</p>
-        <button class="neon-btn" data-page="about">دخول الموقع <span>↗</span></button>
-        <div class="hero-corner left"></div>
-        <div class="hero-corner right"></div>
-      </section>
-
-      <div class="grid two">
-        <article class="panel about-card">
-          <div class="panel-head">
-            <span class="icon">♛</span>
-            <h2>عن <em>SHADOW</em></h2>
-          </div>
-          <div class="about-content">
-            <div class="shadow-avatar">
-              <div class="avatar-glow"></div>
-              <div class="avatar-figure">S</div>
-            </div>
-            <div>
-              <p>أنا لست مثل الآخرين.<br>أصنع طريقي بنفسي في عالم مليء بالضجيج.<br>أنا الظل الذي لا يُرى، ولكن الجميع يشعر بوجوده.</p>
-              <button class="small-btn" data-page="about">اقرأ المزيد</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="panel">
-          <div class="panel-head">
-            <span class="icon">⌁</span>
-            <h2>روابطي الرسمية</h2>
-          </div>
-          <div class="links-list">
-            <a class="link-btn whatsapp" href="https://whatsapp.com/channel/0029VbCe1tt7Noa73ypQcQ3j" target="_blank" rel="noopener">
-              <span class="link-icon">◉</span><span>قناة واتساب</span><strong>›</strong>
-            </a>
-            <a class="link-btn telegram" href="https://t.me/dark00909" target="_blank" rel="noopener">
-              <span class="link-icon">➤</span><span>قناة تيليجرام</span><strong>›</strong>
-            </a>
-            <a class="link-btn bot" href="https://t.me/dark_shadow0162BOT" target="_blank" rel="noopener">
-              <span class="link-icon">⌘</span><span>بوت المتجر</span><strong>›</strong>
-            </a>
-          </div>
-        </article>
-      </div>
-
-      <div class="grid two">
-        <article class="panel">
-          <div class="panel-head">
-            <span class="icon">◇</span>
-            <h2>مشاريعي وبوتاتي</h2>
-          </div>
-          <div class="project-feature">
-            <div class="cube">◇</div>
-            <div>
-              <h3>بوت المتجر</h3>
-              <p>شراء · خدمات · شحن · ألعاب</p>
-              <a class="small-btn" href="https://t.me/dark_shadow0162BOT" target="_blank" rel="noopener">افتح البوت</a>
-            </div>
-          </div>
-          <div class="mini-grid">
-            <div>⚒<small>أدوات</small></div>
-            <div>🎮<small>ألعاب</small></div>
-            <div>⬡<small>حماية</small></div>
-            <div>⌛<small>قريباً</small></div>
-          </div>
-        </article>
-
-        <article class="panel contact-card">
-          <div class="panel-head">
-            <span class="icon">➤</span>
-            <h2>تواصل معي</h2>
-          </div>
-          <p>تواصل معي مباشرة عبر واتساب</p>
-          <a class="phone-btn" href="https://wa.me/201551070578" target="_blank" rel="noopener">
-            <span class="wa-logo">◉</span>
-            <span dir="ltr">+20 155 107 0578</span>
-            <strong>↗</strong>
-          </a>
-          <small>متاح دائماً للرد على استفساراتكم</small>
-        </article>
-      </div>
-
-      <section class="motto">
-        <div>THERE IS NO ONE<br><b>STRONGER THAN SHADOW</b></div>
-        <div class="motto-s">S</div>
-        <div>I DON'T FOLLOW THE PATH...<br><b>I CREATE IT</b></div>
-      </section>
+  <main id="home">
+    <section class="hero">
+      <div class="hero-lines"></div>
+      <div class="crown">♕</div>
+      <p class="eyebrow">◈ THE SHADOW SYSTEM ◈</p>
+      <h1><span>SH</span><b>ADOW</b></h1>
+      <p class="tagline">◇ المجهول هو الأقوى ◇</p>
+      <a class="neon-btn main-btn" href="#about">دخول الموقع <span>↗</span></a>
+      <div class="hero-badge">SHADOW<br><small>ORIGINAL</small></div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="page" id="about">
-      <div class="page-title cyber-frame">
-        <span>♛</span><h1>عن SHADOW</h1><span>♛</span>
-        <p>الهوية · الرؤية · القوة</p>
-      </div>
-      <div class="grid two">
-        <article class="panel large">
-          <h2 class="gradient-title">SHADOW</h2>
-          <p class="lead">المجهول هو الأقوى.</p>
-          <p>مساحة رقمية بطابع مستقبلي تجمع بين الهوية الداكنة، التصميم النيون، والمشاريع الرقمية في مكان واحد.</p>
-          <div class="stats">
-            <div><b>01</b><span>هوية</span></div>
-            <div><b>02</b><span>مشاريع</span></div>
-            <div><b>03</b><span>روابط</span></div>
+    <section class="cards two" id="about">
+      <article class="panel about-panel">
+        <div class="panel-title"><span class="icon">♕</span><h2>عن <b>SHADOW</b></h2></div>
+        <div class="about-content">
+          <div class="avatar">
+            <div class="hood">◈</div>
+            <span>SHADOW</span>
           </div>
-        </article>
-        <article class="panel quote-panel">
-          <div class="big-s">S</div>
-          <p>“لا أتبع الطريق…<br><strong>أنا أصنعه.</strong>”</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- LINKS -->
-    <section class="page" id="links">
-      <div class="page-title cyber-frame">
-        <span>⌁</span><h1>الروابط الرسمية</h1><span>⌁</span>
-        <p>كل روابط SHADOW في مكان واحد</p>
-      </div>
-      <div class="link-cards">
-        <a class="big-link whatsapp" href="https://wa.me/201551070578" target="_blank" rel="noopener">
-          <span>◉</span><div><b>واتساب</b><small>+20 155 107 0578</small></div><strong>↗</strong>
-        </a>
-        <a class="big-link telegram" href="https://t.me/dark00909" target="_blank" rel="noopener">
-          <span>➤</span><div><b>قناة تيليجرام</b><small>t.me/dark00909</small></div><strong>↗</strong>
-        </a>
-        <a class="big-link whatsapp" href="https://whatsapp.com/channel/0029VbCe1tt7Noa73ypQcQ3j" target="_blank" rel="noopener">
-          <span>◉</span><div><b>قناة واتساب</b><small>القناة الرسمية</small></div><strong>↗</strong>
-        </a>
-        <a class="big-link bot" href="https://t.me/dark_shadow0162BOT" target="_blank" rel="noopener">
-          <span>⌘</span><div><b>بوت المتجر</b><small>بوت SHADOW الرسمي</small></div><strong>↗</strong>
-        </a>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="page" id="projects">
-      <div class="page-title cyber-frame">
-        <span>◇</span><h1>المشاريع</h1><span>◇</span>
-        <p>مشاريع SHADOW الرقمية</p>
-      </div>
-      <div class="grid three">
-        <article class="panel project-card"><div class="project-icon">⌘</div><h2>بوت المتجر</h2><p>خدمات، شحن، ألعاب وأدوات.</p><a href="https://t.me/dark_shadow0162BOT" target="_blank" rel="noopener" class="small-btn">فتح البوت</a></article>
-        <article class="panel project-card"><div class="project-icon">⚡</div><h2>أدوات</h2><p>أدوات رقمية بطابع سريع وحديث.</p><button class="small-btn" onclick="soon()">قريباً</button></article>
-        <article class="panel project-card"><div class="project-icon">⬡</div><h2>حماية</h2><p>أفكار ومشاريع للحماية والإدارة.</p><button class="small-btn" onclick="soon()">قريباً</button></article>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="page" id="contact">
-      <div class="page-title cyber-frame">
-        <span>✦</span><h1>تواصل معي</h1><span>✦</span>
-        <p>اختر الطريقة المناسبة</p>
-      </div>
-      <div class="contact-box panel">
-        <div class="contact-logo">S</div>
-        <h2>SHADOW</h2>
-        <p>للتواصل المباشر اضغط على زر واتساب.</p>
-        <a class="neon-btn red" href="https://wa.me/201551070578" target="_blank" rel="noopener">فتح واتساب ↗</a>
-        <div class="social-row">
-          <a href="https://t.me/dark00909" target="_blank" rel="noopener">Telegram</a>
-          <a href="https://whatsapp.com/channel/0029VbCe1tt7Noa73ypQcQ3j" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="https://t.me/dark_shadow0162BOT" target="_blank" rel="noopener">Store Bot</a>
+          <div class="about-text">
+            <p>أنا لست مثل الآخرين.</p>
+            <p>أصنع طريقي بنفسي في عالم مليء بالضجيج.</p>
+            <p class="accent">أنا الظل الذي لا يُرى، ولكن الجميع يشعر به.</p>
+            <div class="divider">◇━━━━♛━━━━◇</div>
+            <a class="small-btn" href="#contact">اقرأ المزيد</a>
+          </div>
         </div>
-      </div>
+      </article>
+
+      <article class="panel" id="links">
+        <div class="panel-title"><span class="icon">⌘</span><h2>روابطي الرسمية</h2></div>
+        <div class="link-stack">
+          <a class="link-card whatsapp" href="https://whatsapp.com/channel/0029VbCe1tt7Noa73ypQcQ3j" target="_blank">
+            <span class="link-icon">◉</span><span>قناة واتساب</span><i>›</i>
+          </a>
+          <a class="link-card telegram" href="https://t.me/dark00909" target="_blank">
+            <span class="link-icon">➤</span><span>قناة تيليجرام</span><i>›</i>
+          </a>
+          <a class="link-card bot" href="https://t.me/dark_shadow0162BOT" target="_blank">
+            <span class="link-icon">⌬</span><span>بوت المتجر</span><i>›</i>
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section class="cards two" id="projects">
+      <article class="panel projects-panel">
+        <div class="panel-title"><span class="icon">◇</span><h2>مشاريعي وبوتاتي</h2></div>
+        <div class="project-feature">
+          <div class="cube">◇</div>
+          <div>
+            <h3>بوت المتجر</h3>
+            <p>شراء • خدمات • شحن • ألعاب</p>
+            <a class="small-btn" href="https://t.me/dark_shadow0162BOT" target="_blank">إفتح البوت</a>
+          </div>
+        </div>
+        <div class="mini-grid">
+          <div>⚒<small>أدوات</small></div>
+          <div>♜<small>ألعاب</small></div>
+          <div>⬡<small>حماية</small></div>
+          <div>⌛<small>قريباً</small></div>
+        </div>
+      </article>
+
+      <article class="panel contact-panel" id="contact">
+        <div class="panel-title"><span class="icon">➤</span><h2>تواصل معي</h2></div>
+        <p class="contact-intro">تواصل معي مباشرة عبر واتساب</p>
+        <a class="phone-box" href="https://wa.me/201551070578" target="_blank" rel="noopener">
+          <span class="wa-icon">◉</span>
+          <strong>+20 155 107 0578</strong>
+          <span>↗</span>
+        </a>
+        <p class="hint">◇ متاح دائماً للرد على استفساراتكم ◇</p>
+        <div class="contact-actions">
+          <a href="https://wa.me/201551070578" target="_blank">واتساب</a>
+          <a href="https://t.me/dark00909" target="_blank">تيليجرام</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="quote">
+      <div>THERE IS NO ONE<br><b>STRONGER THAN SHADOW</b></div>
+      <div class="s-emblem">S</div>
+      <div>I DON'T FOLLOW THE PATH...<br><b>I CREATE IT</b></div>
     </section>
   </main>
 
   <footer>
-    <span>© 2026 SHADOW — جميع الحقوق محفوظة</span>
-    <span class="footer-mark">S</span>
+    <span>© 2026 SHADOW — جميع الحقوق محفوظة.</span>
+    <div class="footer-links">
+      <a href="https://t.me/dark00909" target="_blank">TG</a>
+      <a href="https://wa.me/201551070578" target="_blank">WA</a>
+      <a href="https://whatsapp.com/channel/0029VbCe1tt7Noa73ypQcQ3j" target="_blank">◉</a>
+    </div>
   </footer>
 
-  <div class="toast" id="toast">تم التنفيذ</div>
   <script src="script.js"></script>
 </body>
 </html>

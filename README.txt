@@ -1,17 +1,22 @@
-# SHADOW Neon Website
+# SHADOW Website
 
-موقع SHADOW بتصميم Cyberpunk باللونين الأزرق والأحمر.
+موقع SHADOW بتصميم نيون أزرق/أحمر، بطاقات زاوية، ظلال، وهيدر كبير.
 
-## الملفات
-- index.html — الصفحة والصفحات الداخلية.
-- style.css — التصميم والمؤثرات والاستجابة للموبايل.
-- script.js — التنقل بين الصفحات والقائمة للموبايل.
+الملفات:
+- index.html
+- style.css
+- script.js
 
-## التشغيل
-افتح `index.html` مباشرة في المتصفح.
+طريقة الاستخدام:
+1. ارفع الملفات الثلاثة إلى مستودع GitHub.
+2. من Settings > Pages اختر Deploy from a branch.
+3. اختر Branch: main و Folder: / (root).
+4. احفظ وانتظر حتى يتم النشر.
 
-## الروابط المضافة
-- واتساب: https://wa.me/201551070578
-- قناة تيليجرام: https://t.me/dark00909
-- قناة واتساب: https://whatsapp.com/channel/0029VbCe1tt7Noa73ypQcQ3j
-- بوت المتجر: https://t.me/dark_shadow0162BOT
+زر الرقم يفتح واتساب مباشرة على:
++20 155 107 0578
+
+الروابط:
+Telegram: https://t.me/dark00909
+WhatsApp Channel: https://whatsapp.com/channel/0029VbCe1tt7Noa73ypQcQ3j
+Store Bot: https://t.me/dark_shadow0162BOT
