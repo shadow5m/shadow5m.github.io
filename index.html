@@ -2,22 +2,95 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>SHADOW | Official</title>
 <style>
-*{box-sizing:border-box}body{margin:0;min-height:100vh;color:#fff;font-family:Arial,Tahoma,sans-serif;background:radial-gradient(circle at 15% 15%,#1d315c55,transparent 30%),radial-gradient(circle at 85% 20%,#6d28d955,transparent 30%),#050711}
-.container{max-width:900px;margin:auto;padding:30px 16px}.card{margin:18px 0;padding:28px;border-radius:28px;background:linear-gradient(145deg,#ffffff18,#ffffff05);border:1px solid #ffffff20;box-shadow:0 20px 60px #0009;backdrop-filter:blur(18px)}
-.hero{text-align:center;padding:50px 20px}.avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;border:3px solid #a5c9ff;box-shadow:0 0 0 8px #3b82f611,0 0 45px #3b82f66b}
-h1{font-size:48px;margin:18px 0 4px;font-weight:900;letter-spacing:5px;text-shadow:0 0 28px #93c5fd88}.tag{color:#a5c9ff;font-size:18px;font-weight:700}.subtitle{opacity:.7}
-h2{margin:0 0 20px;font-size:23px}.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.item{padding:19px;border-radius:19px;background:#ffffff0d;border:1px solid #ffffff14}.item b{display:block;color:#9ec5ff;margin-bottom:8px}
-.links{display:grid;gap:13px}.btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:16px;border-radius:17px;color:#fff;text-decoration:none;font-weight:900;border:1px solid #ffffff20;background:linear-gradient(135deg,#2563eb,#4f46e5);transition:.22s;box-shadow:0 8px 25px #2563eb33}.btn:hover{transform:translateY(-3px) scale(1.01)}.whatsapp{background:linear-gradient(135deg,#128c4a,#20c76a);box-shadow:0 8px 25px #20c76a33}.telegram{background:linear-gradient(135deg,#1479b8,#29a9ea)}.bot{background:linear-gradient(135deg,#6d28d9,#9333ea)}
-.badge{display:inline-block;padding:6px 13px;border-radius:999px;font-size:12px;background:#3b82f61f;border:1px solid #93c5fd33;color:#a9caff}.footer{text-align:center;opacity:.5;padding:25px 0 10px}
-@media(max-width:500px){h1{font-size:39px}.hero{padding:40px 15px}.card{padding:22px}}
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#03040b;color:#fff;font-family:Cairo,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(#ffffff05 1px,transparent 1px),linear-gradient(90deg,#ffffff05 1px,transparent 1px);background-size:45px 45px;mask-image:linear-gradient(to bottom,#000,transparent)}
+.page{min-height:100vh;display:none;align-items:center;justify-content:center;padding:35px 16px;position:relative}.page.active{display:flex}
+.wrap{width:min(950px,100%);text-align:center}.glow{position:absolute;width:280px;height:280px;border-radius:50%;filter:blur(80px);opacity:.32;pointer-events:none}.g1{background:#2563eb;top:5%;right:5%}.g2{background:#9333ea;bottom:5%;left:5%}
+.logo{width:145px;height:145px;border-radius:50%;object-fit:cover;border:3px solid #a5c9ff;box-shadow:0 0 0 10px #3b82f611,0 0 60px #3b82f688;margin-bottom:20px}
+.big{font-size:clamp(65px,15vw,150px);line-height:.9;margin:0;font-weight:900;letter-spacing:10px;background:linear-gradient(90deg,#fff,#7dd3fc,#c084fc,#fff);-webkit-background-clip:text;color:transparent;text-shadow:0 0 45px #60a5fa55}
+.kicker{margin:25px 0;color:#a5c9ff;font-size:18px}.btn{border:0;color:#fff;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 25px;border-radius:18px;font-weight:900;cursor:pointer;font-family:inherit;transition:.25s;background:linear-gradient(135deg,#2563eb,#7c3aed);box-shadow:0 10px 30px #2563eb33}.btn:hover{transform:translateY(-4px) scale(1.02);filter:brightness(1.12)}
+.btn.green{background:linear-gradient(135deg,#0b8f4d,#20c76a)}.btn.blue{background:linear-gradient(135deg,#1479b8,#29a9ea)}.btn.purple{background:linear-gradient(135deg,#6d28d9,#c026d3)}.btn.dark{background:#ffffff0d;border:1px solid #ffffff20;box-shadow:none}
+.nav{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:25px}
+.card{background:linear-gradient(145deg,#ffffff14,#ffffff05);border:1px solid #ffffff1a;border-radius:30px;padding:35px;box-shadow:0 25px 80px #000b;backdrop-filter:blur(18px)}
+.title{font-size:42px;margin:0 0 10px;font-weight:900}.muted{opacity:.65}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px;margin:25px 0}.box{padding:22px;border-radius:20px;background:#ffffff08;border:1px solid #ffffff12}.box b{display:block;color:#9ec5ff;margin-bottom:8px}
+.links{display:grid;gap:14px;margin-top:20px}.footer{opacity:.45;margin-top:25px;font-size:13px}
+@media(max-width:600px){.card{padding:24px}.title{font-size:32px}.big{letter-spacing:5px}}
 </style>
 </head>
-<body><div class="container">
-<section class="card hero"><img class="avatar" src="https://via.placeholder.com/140" alt="SHADOW"><div class="badge">OFFICIAL PROFILE</div><h1>SHADOW</h1><div class="tag">✦ صفحة شخصية من الطراز النادر ✦</div><p class="subtitle">برمجة • بوتات • تصميم • مشاريع رقمية</p></section>
-<section class="card"><h2>👤 معلومات SHADOW</h2><div class="info"><div class="item"><b>الاسم</b>SHADOW</div><div class="item"><b>رقم التواصل</b><a class="btn whatsapp" href="https://wa.me/201551070578" target="_blank">💬 تواصل معي على واتساب</a></div></div></section>
-<section class="card"><h2>⚡ الروابط الرسمية</h2><div class="links"><a class="btn telegram" href="https://t.me/dark00909" target="_blank">✈️ قناة SHADOW على تيليجرام</a><a class="btn whatsapp" href="https://whatsapp.com/channel/0029VbCe1tt7Noa73ypQcQ3j" target="_blank">📱 قناة SHADOW على واتساب</a><a class="btn bot" href="https://t.me/dark_shadow0162BOT" target="_blank">🤖 بوت المتجر</a></div></section>
-<section class="card"><h2>🖤 نبذة</h2><p>أهلاً بك في الصفحة الرسمية لـ <strong>SHADOW</strong> — هنا تجد روابط التواصل والقنوات والبوت في مكان واحد.</p></section>
-<div class="footer">© 2026 SHADOW — OFFICIAL</div></div></body></html>
+<body>
+
+<!-- الصفحة 1 -->
+<section class="page active" id="home">
+<div class="glow g1"></div><div class="glow g2"></div>
+<div class="wrap">
+<img class="logo" src="https://via.placeholder.com/145" alt="SHADOW">
+<h1 class="big">SHADOW</h1>
+<div class="kicker">✦ OFFICIAL DIGITAL WORLD ✦</div>
+<p class="muted">مرحباً بك في عالمي — كل شيء عن SHADOW في مكان واحد.</p>
+<div class="nav"><button class="btn" onclick="go('about')">التالي ✦</button></div>
+</div>
+</section>
+
+<!-- الصفحة 2 -->
+<section class="page" id="about">
+<div class="wrap"><div class="card">
+<h2 class="title">👑 عن SHADOW</h2><p class="muted">شخص مهتم بالبرمجة والبوتات والمشاريع الرقمية، وهذه الصفحة تجمع أهم الروابط والمعلومات.</p>
+<div class="grid">
+<div class="box"><b>الاسم</b>SHADOW</div>
+<div class="box"><b>رقم التواصل</b>+201551070578</div>
+<div class="box"><b>المجال</b>برمجة • بوتات • مواقع</div>
+</div>
+<div class="nav"><button class="btn dark" onclick="go('home')">‹ الرئيسية</button><button class="btn" onclick="go('links')">الروابط ✦</button></div>
+</div></div>
+</section>
+
+<!-- الصفحة 3 -->
+<section class="page" id="links">
+<div class="wrap"><div class="card">
+<h2 class="title">⚡ الروابط الرسمية</h2>
+<p class="muted">اختار المكان اللي عايز تزورني فيه.</p>
+<div class="links">
+<a class="btn green" href="https://wa.me/201551070578" target="_blank">💬 واتساب — تواصل معي</a>
+<a class="btn blue" href="https://t.me/dark00909" target="_blank">✈️ قناة تيليجرام</a>
+<a class="btn green" href="https://whatsapp.com/channel/0029VbCe1tt7Noa73ypQcQ3j" target="_blank">📱 قناة واتساب</a>
+<a class="btn purple" href="https://t.me/dark_shadow0162BOT" target="_blank">🤖 بوت المتجر</a>
+</div>
+<div class="nav"><button class="btn dark" onclick="go('about')">‹ عني</button><button class="btn" onclick="go('projects')">المشاريع ✦</button></div>
+</div></div>
+</section>
+
+<!-- الصفحة 4 -->
+<section class="page" id="projects">
+<div class="wrap"><div class="card">
+<h2 class="title">🤖 المشاريع</h2><p class="muted">هنا تقدر تضيف كل بوتاتك ومواقعك ومشاريعك مستقبلاً.</p>
+<div class="grid">
+<div class="box"><b>🤖 بوت المتجر</b>متاح من الروابط الرسمية</div>
+<div class="box"><b>🌐 الموقع الشخصي</b>SHADOW Official</div>
+<div class="box"><b>⚙️ مشاريع قادمة</b>قريباً...</div>
+</div>
+<div class="nav"><button class="btn dark" onclick="go('links')">‹ الروابط</button><button class="btn" onclick="go('contact')">التواصل ✦</button></div>
+</div></div>
+</section>
+
+<!-- الصفحة 5 -->
+<section class="page" id="contact">
+<div class="wrap"><div class="card">
+<h2 class="title">📞 تواصل معي</h2><p class="muted">للتواصل المباشر استخدم واتساب.</p>
+<a class="btn green" href="https://wa.me/201551070578" target="_blank">💬 افتح محادثة واتساب</a>
+<div class="nav"><button class="btn dark" onclick="go('projects')">‹ المشاريع</button><button class="btn" onclick="go('home')">⌂ البداية</button></div>
+<div class="footer">© 2026 SHADOW — OFFICIAL</div>
+</div></div>
+</section>
+
+<script>
+function go(id){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ const el=document.getElementById(id);el.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
